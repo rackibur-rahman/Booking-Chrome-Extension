@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "BD Railway Booking",
+  "version": "3.2",
+  "description": "Auto fill, search, coach and seat automation.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "500": "logo.png"
+    }
+  },
+  "icons": {
+    "500": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
